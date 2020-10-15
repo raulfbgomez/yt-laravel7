@@ -1,1 +1,95 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+body{
+  background-color: $body-bg;
+  margin: 0;
+}
+
+#nav {
+  background-color: #fff;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      list-style-type: none;
+      a {
+        color: $blue;
+        text-decoration: none;
+        padding: 10px;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  background-color: #fff;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.button-primary {
+  border: 1px solid $blue;
+  color: $blue;
+  &:hover {
+    background-color: $blue;
+    color: #fff;
+  }
+}
+
+.container {
+  display: block;
+  margin: 30px auto;
+  width: 80%;
+}
+
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  input {
+    background-color: #fff;
+    box-sizing: content-box;
+    border: 1px solid #f3f3f3;
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+  }
+  button {
+    background-color: #fff;
+    box-sizing: content-box;
+    border: 1px solid $cyan;
+    color: $cyan;
+    margin-top: 30px;
+    padding: 10px;
+    width: 100%;
+    &:hover {
+      background-color: $cyan;
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+}
+
+.lista-pagos {
+  padding: 0;
+  li {
+    background-color: #fff;
+    border: 1px solid #f3f3f3;
+    list-style-type: none;
+    margin: 4px 0;
+    padding: 10px;
+  }
+}
