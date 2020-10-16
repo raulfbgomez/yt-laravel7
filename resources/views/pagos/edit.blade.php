@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('contenido')
-  <form action="/pagos/create" method="POST" class="form">
+  <form action="/pagos/{{ $payment->id }}/edit" method="POST" class="form">
     @if ($errors->any())
       @foreach ($errors->all() as $error)
           <div class="message message-error">
@@ -10,8 +10,8 @@
       @endforeach
     @endif
     @csrf
-    <input type="text" name="amount" placeholder="Ingresa el monto" />
-    <input type="date" name="fecha" />
+    <input type="text" name="amount" value="{{ $payment->amount }}" placeholder="Ingresa el monto" />
+    <input type="date" name="fecha" value={{ $payment->date }} />
     <button type="submit">Guardar</button>
   </form>
 @endsection

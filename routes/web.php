@@ -22,3 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pagos', 'PagosController@index');
 Route::post('/pagos/create', 'PagosController@store');
+Route::get('/pagos/{id}/delete', 'PagosController@delete');
+Route::get('/pagos/{id}/edit', 'PagosController@edit');
+Route::post('/pagos/{id}/edit', 'PagosController@update');

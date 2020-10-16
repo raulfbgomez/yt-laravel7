@@ -95,5 +95,23 @@
   list-style-type: none;
   margin: 4px 0;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message {
+  color: #fff;
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.message-success {
+  background-color: #38c172;
+}
+
+.message-error {
+  background-color: #e3342f;
 }
 
