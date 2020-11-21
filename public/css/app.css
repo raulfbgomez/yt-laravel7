@@ -45,6 +45,16 @@
   color: #fff;
 }
 
+.button-accent {
+  border: 1px solid #6cb2eb;
+  color: #6cb2eb;
+}
+
+.button-accent:hover {
+  background-color: #6cb2eb;
+  color: #fff;
+}
+
 .container {
   display: block;
   margin: 30px auto;

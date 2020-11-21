@@ -46,6 +46,15 @@ body{
   }
 }
 
+.button-accent {
+  border: 1px solid $cyan;
+  color: $cyan;
+  &:hover {
+    background-color: $cyan;
+    color: #fff;
+  }
+}
+
 .container {
   display: block;
   margin: 30px auto;

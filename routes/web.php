@@ -26,6 +26,11 @@ Route::get('/pagos/{id}/delete', 'PagosController@delete');
 Route::get('/pagos/{id}/edit', 'PagosController@edit');
 Route::post('/pagos/{id}/edit', 'PagosController@update');
 
-Route::get('/customers', 'CustomerController@index');
-Route::get('/customers/create', 'CustomerController@create');
-Route::post('/customers/store', 'CustomerController@store');
+Route::group(['prefix' => 'customers'], function() {
+    Route::get('/', 'CustomerController@index');
+    Route::get('/create', 'CustomerController@create');
+    Route::post('/store', 'CustomerController@store');
+    Route::get('/{customer_id}/payment', 'CustomerController@payment');
+    Route::post('/{customer_id}/payment', 'CustomerController@paymentStore');
+    Route::get('/{customer_id}/payments', 'CustomerController@payments');
+});
