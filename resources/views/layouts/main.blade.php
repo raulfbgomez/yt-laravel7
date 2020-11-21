@@ -17,8 +17,8 @@
 <body>
   <nav id="nav">
     <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Customers</a></li>
+      <li><a href="/home">Inicio</a></li>
+      <li><a href="/customers">Customers</a></li>
       <li>
         <a class="dropdown-item" href="{{ route('logout') }}"
           onclick="event.preventDefault();

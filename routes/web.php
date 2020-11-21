@@ -25,3 +25,7 @@ Route::post('/pagos/create', 'PagosController@store');
 Route::get('/pagos/{id}/delete', 'PagosController@delete');
 Route::get('/pagos/{id}/edit', 'PagosController@edit');
 Route::post('/pagos/{id}/edit', 'PagosController@update');
+
+Route::get('/customers', 'CustomerController@index');
+Route::get('/customers/create', 'CustomerController@create');
+Route::post('/customers/store', 'CustomerController@store');
