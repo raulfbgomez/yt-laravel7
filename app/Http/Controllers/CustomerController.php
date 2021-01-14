@@ -97,7 +97,11 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $customer = Customer::findOrFail($id);
+        return view('customers.edit', [
+            'customer_id' => $id,
+            'customer' => $customer
+        ]);
     }
 
     /**
@@ -109,7 +113,11 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $customer = Customer::findOrFail($id);
+         $customer->name = $request->input('name');
+         $customer->lastName = $request->input('lastName');
+         $customer->save();
+         return redirect('customers/'.$customer->id.'/payments');
     }
 
     /**
@@ -120,6 +128,9 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $customer = Customer::findOrFail($id);
+        $customer->payments()->detach();
+        $customer->delete();
+        return redirect('/customers');
     }
 }

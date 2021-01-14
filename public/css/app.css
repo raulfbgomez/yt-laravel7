@@ -55,6 +55,18 @@
   color: #fff;
 }
 
+.button-danger {
+  border: 1px solid #e3342f;
+  color: #e3342f;
+  font-size: 1em;
+}
+
+.button-danger:hover {
+  background-color: #e3342f;
+  color: #fff;
+  cursor: pointer;
+}
+
 .container {
   display: block;
   margin: 30px auto;

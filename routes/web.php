@@ -30,6 +30,9 @@ Route::group(['prefix' => 'customers'], function() {
     Route::get('/', 'CustomerController@index');
     Route::get('/create', 'CustomerController@create');
     Route::post('/store', 'CustomerController@store');
+    Route::get('/{id}/edit', 'CustomerController@edit');
+    Route::post('/{id}/edit', 'CustomerController@update');
+    Route::post('/{id}/delete', 'CustomerController@destroy');
     Route::get('/{customer_id}/payment', 'CustomerController@payment');
     Route::post('/{customer_id}/payment', 'CustomerController@paymentStore');
     Route::get('/{customer_id}/payments', 'CustomerController@payments');

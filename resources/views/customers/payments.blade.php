@@ -2,7 +2,7 @@
 
 @section('contenido')
   <div class="container">
-    <h1>Pagos realizados por {{ $customer->name }}</h1>
+    <h1>Pagos realizados por {{ $customer->name }} {{ $customer->lastName }}</h1>
     <a href="{{ url('/customers/'.$customer->id.'/payment') }}" class="button button-accent">Agregar pago</a>
     <ul class="lista-pagos">
       @foreach ($customer->payments as $payment)

@@ -55,6 +55,17 @@ body{
   }
 }
 
+.button-danger {
+  border: 1px solid $red;
+  color: $red;
+  font-size: 1em;
+  &:hover {
+    background-color: $red;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
 .container {
   display: block;
   margin: 30px auto;
